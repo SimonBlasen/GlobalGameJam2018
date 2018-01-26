@@ -12,13 +12,13 @@ public class Cubie : MonoBehaviour {
     private PowercubeCreator powercubeCreator;
 
     // Use this for initialization
-    void Start ()
+    protected void Start ()
     {
         powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	protected void Update ()
     {
 		if (colliderChecker.colliderInside.Count > 0)
         {
@@ -44,6 +44,11 @@ public class Cubie : MonoBehaviour {
             //mat.color = Color.red;
             //GetComponent<MeshRenderer>().material = mat;
         }
+	}
+
+	public virtual void Interact(InteractionType interaction)
+	{
+
 	}
 
     public CubeType CubeType
