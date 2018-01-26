@@ -62,12 +62,12 @@ public class Player : MonoBehaviour {
 
 			for (int i = 0; i < hitsCrosshair.Length; i++)
 			{
-				if (hitsCrosshair[i].transform.GetComponent<Cubie>() != null)
+				if (hitsCrosshair[i].collider.transform.GetComponent<Cubie>() != null)
 				{
 					if (hitsCrosshair[i].distance < nearestDistance)
 					{
 						nearestDistance = hitsCrosshair[i].distance;
-						nearestCubie = hitsCrosshair[i].transform;
+						nearestCubie = hitsCrosshair[i].collider.transform;
 					}
 				}
 			}
