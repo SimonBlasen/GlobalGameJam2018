@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum InteractionType {
 
-	PUSH_SOFT, PUSH_HARD, LIFT, SCREAM
+	PUSH_SOFT, PUSH_HARD, LIFT, SCREAM, THROW, PUT_DOWN
 }

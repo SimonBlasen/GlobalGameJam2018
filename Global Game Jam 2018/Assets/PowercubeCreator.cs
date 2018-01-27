@@ -8,7 +8,8 @@ public class PowercubeCreator : MonoBehaviour {
     private CubeConstellation[] constellations
         = new CubeConstellation[]
         {
-            new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.GREEN }, CubeType.YELLOW),
+		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.GREEN }, CubeType.YELLOW),
+		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.RED }, CubeType.GREEN),
 
         };
 
@@ -39,6 +40,7 @@ public class PowercubeCreator : MonoBehaviour {
 
                 if (matches)
                 {
+					Debug.Log("Constellation [" + cc + "] matches");
                     CubeType resultType = constellations[cc].resultType;
 
                     GameObject instCube = Instantiate(allCubes.cubePrefabs[(int)resultType]);
@@ -92,9 +94,10 @@ public class CubeConstellation
             tTypes.Add(cubeTypes[i]);
         }
 
-        for (int i = 0; i < cubeTypes.Length; i++)
+		for (int i = 0; i < cubes.Length; i++)
         {
-            tTypes.Remove(cubeTypes[i]);
+			tTypes.Remove(cubes[i].GetComponent<Cubie>().CubeType);
+            //tTypes.Remove(cubeTypes[i]);
         }
 
         return tTypes.Count == 0;

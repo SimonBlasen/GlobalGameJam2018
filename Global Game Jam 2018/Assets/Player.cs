@@ -15,6 +15,12 @@ public class Player : MonoBehaviour {
 	private float kickFullChargeTime = 1f;
 	[SerializeField]
 	private float kick_pushHardBorder = 0.8f;
+	[SerializeField]
+	private float hover_throw_threshhold_velocity = 5f;
+	[SerializeField]
+	private float hover_cube_P = 1f;
+	[SerializeField]
+	private float hover_cube_I = 0.8f;
 
 	[Header("References")]
 	[SerializeField]
@@ -35,7 +41,8 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Cursor.visible = true;
+        Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 
 		imageKickChargeX = image_kickCharge.GetComponent<RectTransform>().sizeDelta.x;
 		imageKickChargeY = image_kickCharge.GetComponent<RectTransform>().sizeDelta.y;
@@ -44,6 +51,11 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+		}
 		if (kick_charge != 0f)
 		{
 			image_kickCharge.GetComponent<RectTransform>().sizeDelta = new Vector2(imageKickChargeX * Mathf.Min(1f, (kick_charge / kickFullChargeTime)), imageKickChargeY);
@@ -99,21 +111,33 @@ public class Player : MonoBehaviour {
 				if (nearestCubie != null)
                 {
 				m_grabbedCubem = nearestCubie;
+				m_grabbedCubem.GetComponent<Rigidbody>().useGravity = false;
 				m_grab_relative = nearestCubie.position - transform.position;
                 }
             
         }
 
         if (Input.GetMouseButtonUp(0) && m_grabbedCubem != null)
-        {
+		{
+			m_grabbedCubem.GetComponent<Rigidbody>().useGravity = true;
+			if (m_grabbedCubem.GetComponent<Rigidbody>().velocity.magnitude > hover_throw_threshhold_velocity)
+			{
+				m_grabbedCubem.GetComponent<Cubie>().Interact(InteractionType.THROW);
+			}
+			else
+			{
+				m_grabbedCubem.GetComponent<Cubie>().Interact(InteractionType.PUT_DOWN);
+			}
             m_grabbedCubem = null;
         }
 
 
         if (m_grabbedCubem)
         {
-            m_grabbedCubem.position = transform.position + Camera.main.transform.forward * m_hoverRadius;
-			m_grabbedCubem.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			Vector3 toDest = (transform.position + Camera.main.transform.forward * m_hoverRadius) - m_grabbedCubem.transform.position;
+			m_grabbedCubem.GetComponent<Rigidbody>().AddForce(toDest * (Vector3.Distance(m_grabbedCubem.transform.position, (transform.position + Camera.main.transform.forward * m_hoverRadius)) * hover_cube_P + m_grabbedCubem.GetComponent<Rigidbody>().velocity.magnitude * hover_cube_I * Mathf.Cos((Mathf.PI / 180f) * Vector3.Angle(m_grabbedCubem.GetComponent<Rigidbody>().velocity, toDest))));
+            //m_grabbedCubem.position = transform.position + Camera.main.transform.forward * m_hoverRadius;
+			//m_grabbedCubem.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
 

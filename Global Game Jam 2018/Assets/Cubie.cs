@@ -1,20 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Cubie : MonoBehaviour {
 
     [SerializeField]
-    private ColliderChecker colliderChecker;
+	protected ColliderChecker colliderChecker;
+	[SerializeField]
+	protected ColliderChecker colliderCheckerPlayer;
     [SerializeField]
     private CubeType type;
 
-    private PowercubeCreator powercubeCreator;
+    protected PowercubeCreator powercubeCreator;
+	protected NavMeshAgent navAgent;
 
     // Use this for initialization
     protected void Start ()
     {
         powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
+		navAgent = GetComponent<NavMeshAgent>();
+		navAgent.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -44,13 +50,39 @@ public class Cubie : MonoBehaviour {
             //mat.color = Color.red;
             //GetComponent<MeshRenderer>().material = mat;
         }
+
+		if (FollowTransform != null)
+		{
+			navAgent.destination = followTrans.position;
+		}
 	}
+
 
 	public virtual void Interact(InteractionType interaction)
 	{
 
 	}
 
+	protected Transform followTrans = null;
+
+	public Transform FollowTransform {
+		get {
+			return followTrans;
+		}
+		set {
+			followTrans = value;
+
+			if (followTrans != null)
+			{
+				navAgent.enabled = true;
+			}
+			else
+			{
+				navAgent.enabled = false;
+			}
+		}
+	}
+		
     public CubeType CubeType
     {
         get

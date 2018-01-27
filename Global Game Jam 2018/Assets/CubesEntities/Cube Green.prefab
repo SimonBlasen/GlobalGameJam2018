@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 23271734462045966}
   - component: {fileID: 54348915341108846}
   - component: {fileID: 114236197348367896}
+  - component: {fileID: 195555122123830628}
   m_Layer: 0
   m_Name: Cube Green
   m_TagString: Cube
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1857036451797298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49, y: 20, z: 8.66}
+  m_LocalPosition: {x: -2.3335993, y: 1.64, z: -17.778112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354528474028580}
@@ -155,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderChecker: {fileID: 114961919391426026}
+  colliderCheckerPlayer: {fileID: 0}
   type: 1
 --- !u!114 &114961919391426026
 MonoBehaviour:
@@ -167,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230d5d7eefa284499df163c8943d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToTag: Cube
   colliderInside: []
 --- !u!135 &135441861148195328
 SphereCollider:
@@ -180,3 +183,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &195555122123830628
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1857036451797298}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

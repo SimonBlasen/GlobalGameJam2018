@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class ColliderChecker : MonoBehaviour {
 
+	[SerializeField]
+	private string objectsToTag = "";
+
+	[HideInInspector]
     public List<Transform> colliderInside = new List<Transform>();
 
 	// Use this for initialization
@@ -19,7 +23,7 @@ public class ColliderChecker : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Cube")
+		if (other.tag == objectsToTag)
         {
             colliderInside.Add(other.transform);
         }
@@ -27,7 +31,7 @@ public class ColliderChecker : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Cube")
+		if (other.tag == objectsToTag)
         {
             colliderInside.Remove(other.transform);
         }
