@@ -864,6 +864,16 @@ Prefab:
       propertyPath: m_Speed
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
   m_IsPrefabParent: 0
@@ -1268,6 +1278,16 @@ Prefab:
     - target: {fileID: 1482806586499260, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
       propertyPath: m_Name
       value: Cube Green (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
@@ -1689,6 +1709,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 58.63
@@ -1730,6 +1755,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -2013,6 +2063,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.73
@@ -2054,6 +2109,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -2137,11 +2217,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4855505350237936, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
       propertyPath: m_LocalPosition.x
       value: 18.89
@@ -2204,52 +2279,6 @@ Prefab:
       propertyPath: images_health.Array.data[2]
       value: 
       objectReference: {fileID: 472958601}
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 79f0b593b388c6f41b2594b9d8fe9fdc, type: 3}
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 809b629dce3f5eb4380f2d21b73046b4, type: 3}
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 37a77bc5cd3b6504a899a6766bcc3308, type: 3}
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 73d7a8a4d5886b847a5953a34a0fa897, type: 3}
-    - target: {fileID: 114047758838267518, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: selfScreamClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: cff94c8dd1151ab4e89370ecd1d2f6d6, type: 3}
-    - target: {fileID: 114918938669392876, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80,
-        type: 2}
-      propertyPath: jumpUp
-      value: 
-      objectReference: {fileID: 8300000, guid: 71e927f82f881a4459d7edea018d02bc, type: 3}
-    - target: {fileID: 4654557175935410, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654557175935410, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 4.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654557175935410, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654557175935410, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17c8e0d90d4599940bfeeb5ba3a4ea80, type: 2}
   m_IsPrefabParent: 0
@@ -2360,6 +2389,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 25.45
@@ -2401,6 +2435,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -2646,6 +2705,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 22.448597
@@ -2699,6 +2763,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -2814,6 +2903,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 62.74
@@ -2855,6 +2949,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -3074,6 +3193,16 @@ Prefab:
         type: 2}
       propertyPath: m_Speed
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
@@ -3557,6 +3686,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 26.45
@@ -3598,6 +3732,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -4372,6 +4531,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 21.448597
@@ -4413,6 +4577,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -4468,6 +4657,16 @@ Prefab:
         type: 2}
       propertyPath: m_Speed
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
@@ -5509,6 +5708,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.6000004
@@ -5562,6 +5766,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -5950,6 +6179,16 @@ Prefab:
       propertyPath: m_Name
       value: Cube Green (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
   m_IsPrefabParent: 0
@@ -6108,6 +6347,115 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072615450}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1080847674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1080847676}
+  - component: {fileID: 1080847675}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1080847675
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080847674}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30299a5c48579a34fafc01b9174b9501, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1080847676
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080847674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.430836, y: 13.886372, z: 3.7526531}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081937296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6693,6 +7041,16 @@ Prefab:
       propertyPath: m_Speed
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
   m_IsPrefabParent: 0
@@ -7074,6 +7432,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
   m_IsPrefabParent: 0
@@ -7334,6 +7702,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 63.87
@@ -7387,6 +7760,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -7808,6 +8206,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.551403
@@ -7849,6 +8252,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -8048,6 +8476,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 24.45
@@ -8101,6 +8534,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -8156,6 +8614,16 @@ Prefab:
         type: 2}
       propertyPath: m_Speed
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
@@ -8323,6 +8791,16 @@ Prefab:
       propertyPath: m_Speed
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
   m_IsPrefabParent: 0
@@ -8370,23 +8848,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 195002920412149404, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: m_Speed
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -8402,6 +8863,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 61.27
@@ -8455,6 +8921,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -8720,6 +9211,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 24.4
@@ -8773,6 +9269,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -9635,6 +10156,16 @@ Prefab:
       propertyPath: m_Name
       value: Cube Green (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341673872860706, guid: c39c95c2f366ca149b6594ca0dd57e43,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
   m_IsPrefabParent: 0
@@ -9734,6 +10265,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.37
@@ -9775,6 +10311,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -10361,6 +10922,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 24.31
@@ -10402,6 +10968,31 @@ Prefab:
       propertyPath: m_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
+        type: 2}
+      propertyPath: yoffoSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0

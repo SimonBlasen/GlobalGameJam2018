@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 1876680958056264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 27.451405, y: 1, z: 15.151267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4867551269249520}
   - {fileID: 4348592689861012}
@@ -256,7 +256,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -274,7 +274,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -342,6 +342,10 @@ MonoBehaviour:
   m_colliderCheckerPlayer: {fileID: 114742671410088206}
   m_type: 3
   m_isAttacking: 0
+  yoffoSounds:
+  - {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
+  - {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
+  - {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
 --- !u!135 &135049146760559716
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -387,7 +391,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

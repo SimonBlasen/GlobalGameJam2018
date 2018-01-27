@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CubieBlue : Cubie {
 
+	[SerializeField]
+	private AudioClip[] yoffoSounds;
+
 	private ActiveLevel m_activeLevel;
 
 	// Use this for initialization
@@ -53,9 +56,16 @@ public class CubieBlue : Cubie {
 
 	public void FollowPlayerForSeconds(float seconds)
 	{
+		Invoke("PlayYoffoSound", Random.Range(0f, 1f));
+
 		followTime = seconds;
 		followingNow = true;
 
 		FollowTransform = m_playerTransform;
+	}
+
+	private void PlayYoffoSound()
+	{
+		PlayAudio(yoffoSounds[Random.Range(0, yoffoSounds.Length)]);
 	}
 }

@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
 	private float hover_cube_I = 0.8f;
 	[SerializeField]
 	private AudioClip[] selfScreamClips;
+	[SerializeField]
+	private AudioClip[] damageClips;
 
 	[Header("References")]
 	[SerializeField]
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour {
 	private Image[] images_health;
 	[SerializeField]
 	private ColliderChecker colliderCheckerScream;
+	[SerializeField]
+	private AudioSource audioSourceDamage;
 
 
 	[Header("Info")]
@@ -229,12 +233,26 @@ public class Player : MonoBehaviour {
 		}
     }
 
+	private void playDamageSound()
+	{
+		int index = Random.Range(0, damageClips.Length);
+
+		audioSourceDamage.clip = damageClips[index];
+		audioSourceDamage.Play();
+	}
+
 	public int Health
 	{
 		get{
 			return health;
 		}
 		set{
+
+			if (value < health)
+			{
+				playDamageSound();
+			}
+
 			health = value;
 			for (int i = 0; i < health; i++)
 			{
