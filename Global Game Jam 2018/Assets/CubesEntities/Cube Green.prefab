@@ -153,7 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4c23a9b6535e74276b552b061b05a94f, type: 2}
+  - {fileID: 2100000, guid: d4f4813d4abb93443acb7836e268fbb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_type: 1
   m_isAttacking: 0
   screamClips:
-  - {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
+  - {fileID: 8300000, guid: e31e0b748fa8b8942b848883441c4ffd, type: 3}
 --- !u!114 &114471661890935808
 MonoBehaviour:
   m_ObjectHideFlags: 1

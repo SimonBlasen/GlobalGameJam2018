@@ -163,10 +163,26 @@ public class Player : MonoBehaviour {
         if (m_grabbedCubem)
         {
 			Vector3 toDest = (transform.position + Camera.main.transform.forward * m_hoverRadius) - m_grabbedCubem.transform.position;
-			m_grabbedCubem.GetComponent<Rigidbody>().AddForce(toDest * (Vector3.Distance(m_grabbedCubem.transform.position, (transform.position + Camera.main.transform.forward * m_hoverRadius)) * hover_cube_P + m_grabbedCubem.GetComponent<Rigidbody>().velocity.magnitude * hover_cube_I * Mathf.Cos((Mathf.PI / 180f) * Vector3.Angle(m_grabbedCubem.GetComponent<Rigidbody>().velocity, toDest))));
+			//m_grabbedCubem.GetComponent<Rigidbody>().AddForce(toDest * (Vector3.Distance(m_grabbedCubem.transform.position, (transform.position + Camera.main.transform.forward * m_hoverRadius)) * hover_cube_P + m_grabbedCubem.GetComponent<Rigidbody>().velocity.magnitude * hover_cube_I * Mathf.Cos((Mathf.PI / 180f) * Vector3.Angle(m_grabbedCubem.GetComponent<Rigidbody>().velocity, toDest))));
             //m_grabbedCubem.position = transform.position + Camera.main.transform.forward * m_hoverRadius;
 			//m_grabbedCubem.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        }
+        
+		
+			RaycastHit[] hits= Physics.RaycastAll(new Ray(transform.position, Camera.main.transform.forward), m_hoverRadius);
+			float maxDistance = m_hoverRadius;
+			for (int i = 0; i < hits.Length; i++)
+			{
+				if (hits[i].collider.tag != "Cube")
+				{
+					if (hits[i].distance - 0.6f < maxDistance && hits[i].distance >1.4f && hits[i].collider.GetType() != typeof(CapsuleCollider) && hits[i].collider.GetType() != typeof(SphereCollider))
+					{
+						maxDistance = hits[i].distance - 0.6f;
+					}
+				}
+			}
+
+			m_grabbedCubem.position = transform.position + Camera.main.transform.forward * maxDistance;
+		}
 
 
 

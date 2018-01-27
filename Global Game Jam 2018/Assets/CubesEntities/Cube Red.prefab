@@ -90,9 +90,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967763167228078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 37.227497, y: 1, z: 16.468357}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4637326272434348}
   - {fileID: 4559753448216960}
@@ -153,7 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e78cb069582e24efc80106f65bed7fb4, type: 2}
+  - {fileID: 2100000, guid: d700d31e0ba21e04cad374447a119367, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_colliderCheckerPlayer: {fileID: 114374497561153238}
   m_type: 0
   m_isAttacking: 0
-  jumpBackStrength: 2000
+  jumpBackStrength: 7000
 --- !u!114 &114147169410760468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,7 +365,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135955483004010694
 SphereCollider:
