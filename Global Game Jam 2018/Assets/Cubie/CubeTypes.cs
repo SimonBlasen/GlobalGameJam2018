@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum CubeType
 { 
-    RED = 0, GREEN = 1, YELLOW = 2,
+	RED = 0, GREEN = 1, YELLOW = 2, BLUE = 3, GREEN_POWER = 4,
 }

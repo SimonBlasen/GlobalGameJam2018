@@ -29,6 +29,15 @@ public class Player : MonoBehaviour {
 	private Image image_crosshairInrange;
 	[SerializeField]
 	private Image image_kickCharge;
+	[SerializeField]
+	private AudioFootsteps audioFootsteps;
+	[SerializeField]
+	private Image[] images_health;
+
+
+	[Header("Info")]
+	[SerializeField]
+	private int health = 3;
 
 
     private Transform m_grabbedCubem = null;
@@ -51,6 +60,10 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		audioFootsteps.WalkingSpeed = (new Vector2(GetComponent<Rigidbody>().velocity.x, GetComponent<Rigidbody>().velocity.z)).magnitude;
+
+
+
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			Cursor.visible = true;
@@ -161,6 +174,7 @@ public class Player : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("Butpihs hard");
 					nearestCubie.GetComponent<Cubie>().Interact(InteractionType.PUSH_HARD);
 				}
 
@@ -183,4 +197,23 @@ public class Player : MonoBehaviour {
 			kick_charge = 0f;
 		}
     }
+
+	public int Health
+	{
+		get{
+			return health;
+		}
+		set{
+			health = value;
+			for (int i = 0; i < health; i++)
+			{
+				images_health[i].enabled = true;
+			}
+
+			for (int i = health; i < images_health.Length; i++)
+			{
+				images_health[i].enabled = false;
+			}
+		}
+	}
 }
