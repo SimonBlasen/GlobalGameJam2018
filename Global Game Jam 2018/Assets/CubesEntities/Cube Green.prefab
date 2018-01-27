@@ -124,12 +124,12 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1857036451797298}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 10
+  m_Drag: 1
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65981088278956498
@@ -155,9 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073e76fa88dcacf40a56badc9f28262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderChecker: {fileID: 114961919391426026}
-  colliderCheckerPlayer: {fileID: 0}
-  type: 1
+  m_colliderChecker: {fileID: 0}
+  m_colliderCheckerPlayer: {fileID: 0}
+  m_type: 0
+  m_isAttacking: 0
 --- !u!114 &114961919391426026
 MonoBehaviour:
   m_ObjectHideFlags: 1

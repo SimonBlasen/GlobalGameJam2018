@@ -7,6 +7,7 @@ public class ColliderChecker : MonoBehaviour {
 
 	[SerializeField]
 	private string objectsToTag = "";
+    public string getObjectsToTag() {return objectsToTag;}
 
 	[HideInInspector]
     public List<Transform> colliderInside = new List<Transform>();
