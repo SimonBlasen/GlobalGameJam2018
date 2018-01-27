@@ -161,6 +161,7 @@ public class Player : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("Butpihs hard");
 					nearestCubie.GetComponent<Cubie>().Interact(InteractionType.PUSH_HARD);
 				}
 

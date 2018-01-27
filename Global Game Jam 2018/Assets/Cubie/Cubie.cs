@@ -93,7 +93,7 @@ public class Cubie : MonoBehaviour {
 
 	public virtual void Interact(InteractionType interaction)
 	{
-
+		Debug.Log("Parent is executed");
 	}
 
 	protected Transform followTrans = null;
