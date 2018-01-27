@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 23068751916157170}
   - component: {fileID: 54819348318756510}
   - component: {fileID: 114320800073064234}
+  - component: {fileID: 195425889656148454}
   m_Layer: 0
   m_Name: Cube Yellow
   m_TagString: Cube
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230d5d7eefa284499df163c8943d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToTag: 
   colliderInside: []
 --- !u!114 &114320800073064234
 MonoBehaviour:
@@ -167,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderChecker: {fileID: 114254457315201540}
+  colliderCheckerPlayer: {fileID: 0}
   type: 2
 --- !u!135 &135027493737144816
 SphereCollider:
@@ -180,3 +183,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &195425889656148454
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745624835458362}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
