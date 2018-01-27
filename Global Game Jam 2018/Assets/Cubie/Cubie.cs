@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Cubie : MonoBehaviour {
 
+	[SerializeField]
+	protected ColliderChecker m_colliderClosePlayer;
     [SerializeField]
 	protected ColliderChecker m_colliderChecker;
 	[SerializeField]
@@ -26,7 +28,7 @@ public class Cubie : MonoBehaviour {
         m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
 	    m_navAgent = GetComponent<NavMeshAgent>();
 		m_navAgent.enabled = false;
-        LoadColliderChecker();
+        //LoadColliderChecker();
         
 	}
 
@@ -74,6 +76,7 @@ public class Cubie : MonoBehaviour {
             //mat.color = Color.red;
             //GetComponent<MeshRenderer>().material = mat;
         }
+
 
 		if (FollowTransform != null)
 		{
@@ -123,4 +126,8 @@ public class Cubie : MonoBehaviour {
             return m_type;
         }
     }
+
+
+
+	
 }
