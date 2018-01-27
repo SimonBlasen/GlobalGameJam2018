@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2513,9 +2513,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &531242424
@@ -3595,6 +3595,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770406238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &773108655 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43,
+    type: 2}
+  m_PrefabInternal: {fileID: 867198385}
 --- !u!1 &824746855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,8 +4049,9 @@ Transform:
   - {fileID: 638700460}
   - {fileID: 473969194}
   - {fileID: 2107441955}
+  - {fileID: 1806377061}
+  - {fileID: 773108655}
   - {fileID: 1152971182}
-  - {fileID: 560805214}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4066,7 +4072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &896697850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4110,9 +4116,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &896697852
@@ -4256,7 +4262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1482806586499260, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
       propertyPath: m_Name
@@ -6051,7 +6057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1545643802
 Transform:
   m_ObjectHideFlags: 0
@@ -6691,6 +6697,7 @@ MonoBehaviour:
   hover_throw_threshhold_velocity: 5
   hover_cube_P: 10
   hover_cube_I: -1
+  selfScreamClips: []
   image_crosshairOutofrange: {fileID: 1180587067}
   image_crosshairInrange: {fileID: 45447769}
   image_kickCharge: {fileID: 1960148244}
@@ -6699,6 +6706,7 @@ MonoBehaviour:
   - {fileID: 323841788}
   - {fileID: 235269929}
   - {fileID: 472958601}
+  colliderCheckerScream: {fileID: 0}
   health: 3
 --- !u!1 &1850509931
 GameObject:
@@ -7615,6 +7623,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
