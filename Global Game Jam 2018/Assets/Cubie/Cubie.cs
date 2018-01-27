@@ -20,15 +20,20 @@ public class Cubie : MonoBehaviour {
     private bool m_isAttacking;
 
 
+	protected Transform m_playerTransform;
+	protected AudioSource m_audioSource;
+
     
 
     // Use this for initialization
     protected void Start ()
     {
-        m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
+		m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
+		m_playerTransform = GameObject.Find("Player").transform;
 	    m_navAgent = GetComponent<NavMeshAgent>();
 		m_navAgent.enabled = false;
         //LoadColliderChecker();
+		m_audioSource = GetComponent<AudioSource>();
         
 	}
 
@@ -48,10 +53,22 @@ public class Cubie : MonoBehaviour {
             }
         }
     }
-	
+
+	private bool lookAtPlayer = false;
+
 	// Update is called once per frame
 	protected void Update ()
     {
+		if (lookAtPlayer && m_navAgent.enabled == false)
+		{
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(m_playerTransform.position - transform.position), 0.2f);
+
+			if (Quaternion.Angle(transform.rotation, Quaternion.LookRotation(m_playerTransform.position - transform.position)) < 3f)
+			{
+				lookAtPlayer = false;
+			}
+		}
+
 		if (m_colliderCheckerPlayer &&m_colliderCheckerPlayer.colliderInside.Count > 0)
         {
             //Debug.Log("Other cubes inside: " + m_colliderChecker.colliderInside.Count);
@@ -92,6 +109,15 @@ public class Cubie : MonoBehaviour {
 			}	
 		}
 	}
+
+	public void PlayAudio(AudioClip clip)
+	{
+		m_audioSource.clip = clip;
+		m_audioSource.Play();
+
+		lookAtPlayer = true;
+	}
+
 
 
 	public virtual void Interact(InteractionType interaction)

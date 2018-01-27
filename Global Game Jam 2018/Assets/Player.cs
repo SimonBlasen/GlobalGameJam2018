@@ -21,6 +21,8 @@ public class Player : MonoBehaviour {
 	private float hover_cube_P = 1f;
 	[SerializeField]
 	private float hover_cube_I = 0.8f;
+	[SerializeField]
+	private AudioClip[] selfScreamClips;
 
 	[Header("References")]
 	[SerializeField]
@@ -33,6 +35,8 @@ public class Player : MonoBehaviour {
 	private AudioFootsteps audioFootsteps;
 	[SerializeField]
 	private Image[] images_health;
+	[SerializeField]
+	private ColliderChecker colliderCheckerScream;
 
 
 	[Header("Info")]
@@ -115,6 +119,17 @@ public class Player : MonoBehaviour {
 		}
 
 
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			if (colliderCheckerScream.colliderInside.Count > 0)
+			{
+				PlayScreamAudio();
+				for (int i = 0; i < colliderCheckerScream.colliderInside.Count; i++)
+				{
+					colliderCheckerScream.colliderInside[i].GetComponent<Cubie>().Interact(InteractionType.SCREAM);
+				}
+			}
+		}
 
 
 
@@ -215,5 +230,14 @@ public class Player : MonoBehaviour {
 				images_health[i].enabled = false;
 			}
 		}
+	}
+
+
+	public void PlayScreamAudio()
+	{
+		int index = Random.Range(0, selfScreamClips.Length);
+
+		GetComponent<AudioSource>().clip = selfScreamClips[index];
+		GetComponent<AudioSource>().Play();
 	}
 }

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class CubieBlue : Cubie {
 
-	private Transform m_playerTransform;
 	private ActiveLevel m_activeLevel;
 
 	// Use this for initialization
 	protected new void Start () {
 		base.Start();
 
-		m_playerTransform = GameObject.Find("Player").transform;
 		m_activeLevel = GameObject.Find("ActiveLevel").GetComponent<ActiveLevel>();
 	}
 
