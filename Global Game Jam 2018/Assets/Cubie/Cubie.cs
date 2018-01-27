@@ -26,12 +26,31 @@ public class Cubie : MonoBehaviour {
         m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
 	    m_navAgent = GetComponent<NavMeshAgent>();
 		m_navAgent.enabled = false;
+        LoadColliderChecker();
+        
 	}
+
+    private void LoadColliderChecker()
+    {
+        foreach(ColliderChecker checker in GetComponentsInChildren<ColliderChecker>())
+        {
+            switch(checker.getObjectsToTag())
+            {
+                case "Cube":
+                    m_colliderChecker = checker;
+                break;
+                case "Player":
+                    m_colliderCheckerPlayer = checker;
+                break;
+                default: break;
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	protected void Update ()
     {
-		if (m_colliderChecker.colliderInside.Count > 0)
+		if (m_colliderCheckerPlayer &&m_colliderCheckerPlayer.colliderInside.Count > 0)
         {
             //Debug.Log("Other cubes inside: " + m_colliderChecker.colliderInside.Count);
 
