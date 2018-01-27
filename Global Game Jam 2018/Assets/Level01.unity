@@ -2345,6 +2345,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &560805214 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43,
+    type: 2}
+  m_PrefabInternal: {fileID: 867198385}
 --- !u!1 &569022217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,6 +3469,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1001 &867198385
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873963902}
+    m_Modifications:
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 19.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482806586499260, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_Name
+      value: Cube Green (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &873963901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,6 +3553,8 @@ Transform:
   - {fileID: 638700460}
   - {fileID: 473969194}
   - {fileID: 2107441955}
+  - {fileID: 1152971182}
+  - {fileID: 560805214}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3675,6 +3728,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 903105691}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &945414647
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873963902}
+    m_Modifications:
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 21.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 13.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482806586499260, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+      propertyPath: m_Name
+      value: Cube Green (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &950145923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4672,6 +4771,11 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!4 &1152971182 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4782893284106954, guid: c39c95c2f366ca149b6594ca0dd57e43,
+    type: 2}
+  m_PrefabInternal: {fileID: 945414647}
 --- !u!1 &1180587065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,7 +6150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd484348f8fb748889fbb1f2114b8ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefabs: []
+  cubePrefabs:
+  - {fileID: 1967763167228078, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
+  - {fileID: 1482806586499260, guid: c39c95c2f366ca149b6594ca0dd57e43, type: 2}
+  - {fileID: 1876680958056264, guid: 225129c08b2081b47be65ef90e8c2ecf, type: 2}
+  - {fileID: 1876680958056264, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
+  - {fileID: 1289850287900976, guid: 420d846a0c4386540af2f556fd2f1488, type: 2}
 --- !u!1001 &1864363591
 Prefab:
   m_ObjectHideFlags: 0
@@ -7476,7 +7585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210ebef2da7e63a48a4c0c4705be2124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allCubes: {fileID: 1850509932}
+  allCubes: {fileID: 1850509934}
 --- !u!4 &2107422699
 Transform:
   m_ObjectHideFlags: 0
