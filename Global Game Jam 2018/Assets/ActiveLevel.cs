@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class ActiveLevel : MonoBehaviour {
 
-	private Transform[] allActiveCubes;
+	[SerializeField]
+	private Transform[] allActiveCubesLevel1;
+	[SerializeField]
+	private Transform[] allActiveCubesLevel2;
+	[SerializeField]
+	private Transform[] allActiveCubesLevel3;
+	[SerializeField]
+	private Transform[] allActiveCubesLevel4;
+	[SerializeField]
+	private Transform[] allActiveCubesLevel5;
 
 	// Use this for initialization
 	void Start () {
