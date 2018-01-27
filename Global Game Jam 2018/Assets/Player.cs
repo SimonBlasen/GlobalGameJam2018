@@ -108,12 +108,12 @@ public class Player : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-				if (nearestCubie != null)
-                {
+			if (nearestCubie != null && nearestCubie.GetComponent<Cubie>().FollowTransform != transform)
+            {
 				m_grabbedCubem = nearestCubie;
 				m_grabbedCubem.GetComponent<Rigidbody>().useGravity = false;
 				m_grab_relative = nearestCubie.position - transform.position;
-                }
+            }
             
         }
 
@@ -144,7 +144,7 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp(1))
         {
-				if (nearestCubie != null)
+			if (nearestCubie != null && nearestCubie.GetComponent<Cubie>().FollowTransform != transform)
                 {
                     Vector3 camFor = Camera.main.transform.forward;
                     camFor.y = 0f;
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetMouseButton(1))
 		{
-			if (nearestCubie != null)
+			if (nearestCubie != null && nearestCubie.GetComponent<Cubie>().FollowTransform != transform)
 			{
 				kick_charge += Time.deltaTime;
 			}

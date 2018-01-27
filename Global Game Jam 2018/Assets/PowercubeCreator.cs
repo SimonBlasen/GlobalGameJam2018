@@ -8,7 +8,7 @@ public class PowercubeCreator : MonoBehaviour {
     private CubeConstellation[] constellations
         = new CubeConstellation[]
         {
-		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.GREEN }, CubeType.YELLOW),
+		new CubeConstellation(new CubeType[] { CubeType.GREEN, CubeType.GREEN }, CubeType.YELLOW),
 		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.RED }, CubeType.GREEN),
 
         };
@@ -94,12 +94,53 @@ public class CubeConstellation
             tTypes.Add(cubeTypes[i]);
         }
 
-		for (int i = 0; i < cubes.Length; i++)
+		CubeType[] sortedCubes = new CubeType[cubes.Length];
+
+		for (int i = 0; i < sortedCubes.Length; i++)
+		{
+			int amountCubesLower = 0;
+			for (int j = 0; j < sortedCubes.Length; j++)
+			{
+				if (j != i && cubes[i].position.y > cubes[j].position.y)
+				{
+					amountCubesLower++;
+				}
+
+				sortedCubes[amountCubesLower] = cubes[i].GetComponent<Cubie>().CubeType;
+			}
+		}
+
+
+		for (int i = 0; i < sortedCubes.Length; i++)
+		{
+			if (i >= 1)
+			{
+				float sideOffset = new Vector2(cubes[i - 1].position.x - cubes[i].position.x, cubes[i - 1].position.z - cubes[i].position.z).magnitude;
+				float spaceBetweenCubes = Mathf.Abs(cubes[i - 1].position.y - cubes[i].position.y) - (cubes[i - 1].localScale.y * 0.5f + cubes[i].localScale.y * 0.5f);
+
+				if (Mathf.Abs(spaceBetweenCubes) > 0.2f || sideOffset > 0.5f)
+				{
+					return false;
+				}
+			}
+
+
+
+			if (sortedCubes[i] != cubeTypes[i])
+			{
+				return false;
+			}
+		}
+
+		/*for (int i = 0; i < cubes.Length; i++)
         {
 			tTypes.Remove(cubes[i].GetComponent<Cubie>().CubeType);
             //tTypes.Remove(cubeTypes[i]);
-        }
+        }*/
 
-        return tTypes.Count == 0;
+
+		return true;
+
+        //return tTypes.Count == 0;
     }
 }
