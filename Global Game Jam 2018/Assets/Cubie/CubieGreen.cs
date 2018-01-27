@@ -25,7 +25,7 @@ public class CubieGreen : Cubie {
 		if (interaction == InteractionType.SCREAM)
 		{
 			Debug.Log("Green heared");
-			Invoke("ScreamSelf", Random.Range(0f, 2f));
+			Invoke("ScreamSelf", Random.Range(0.5f, 1.6f));
 		}
 	}
 
