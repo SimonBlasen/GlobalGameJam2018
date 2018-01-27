@@ -8,7 +8,7 @@ public class PowercubeCreator : MonoBehaviour {
     private CubeConstellation[] constellations
         = new CubeConstellation[]
         {
-		new CubeConstellation(new CubeType[] { CubeType.GREEN, CubeType.GREEN }, CubeType.YELLOW),
+		new CubeConstellation(new CubeType[] { CubeType.GREEN, CubeType.GREEN, CubeType.GREEN }, CubeType.GREEN_POWER),
 		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.RED }, CubeType.GREEN),
 
         };
@@ -17,12 +17,13 @@ public class PowercubeCreator : MonoBehaviour {
     [SerializeField]
     private AllCubes allCubes;
 
+	private ActiveLevel activeLevel;
 
 
 
     // Use this for initialization
     void Start () {
-		
+		activeLevel = GameObject.Find("ActiveLevel").GetComponent<ActiveLevel>();
 	}
 	
 	// Update is called once per frame
@@ -44,6 +45,9 @@ public class PowercubeCreator : MonoBehaviour {
                     CubeType resultType = constellations[cc].resultType;
 
                     GameObject instCube = Instantiate(allCubes.cubePrefabs[(int)resultType]);
+					activeLevel.AddActiveCube(instCube.transform);
+
+
                     instCube.transform.position = middleValue(cubes);
 
                     for (int i = 0; i < cubes.Length; i++)
