@@ -6,38 +6,43 @@ using UnityEngine.AI;
 public class Cubie : MonoBehaviour {
 
     [SerializeField]
-	protected ColliderChecker colliderChecker;
+	protected ColliderChecker m_colliderChecker;
 	[SerializeField]
-	protected ColliderChecker colliderCheckerPlayer;
+	protected ColliderChecker m_colliderCheckerPlayer;
+    protected PowercubeCreator m_powercubeCreator;
+	protected NavMeshAgent m_navAgent;
     [SerializeField]
-    private CubeType type;
+    private CubeType m_type;
 
-    protected PowercubeCreator powercubeCreator;
-	protected NavMeshAgent navAgent;
+    [SerializeField]
+    private bool m_isAttacking;
+
+
+    
 
     // Use this for initialization
     protected void Start ()
     {
-        powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
-		navAgent = GetComponent<NavMeshAgent>();
-		navAgent.enabled = false;
+        m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
+	    m_navAgent = GetComponent<NavMeshAgent>();
+		m_navAgent.enabled = false;
 	}
 	
 	// Update is called once per frame
 	protected void Update ()
     {
-		if (colliderChecker.colliderInside.Count > 0)
+		if (m_colliderChecker.colliderInside.Count > 0)
         {
-            //Debug.Log("Other cubes inside: " + colliderChecker.colliderInside.Count);
+            //Debug.Log("Other cubes inside: " + m_colliderChecker.colliderInside.Count);
 
-            Transform[] transCubes = new Transform[colliderChecker.colliderInside.Count + 1];
-            for (int i = 0; i < colliderChecker.colliderInside.Count; i++)
+            Transform[] transCubes = new Transform[m_colliderChecker.colliderInside.Count + 1];
+            for (int i = 0; i < m_colliderChecker.colliderInside.Count; i++)
             {
-                transCubes[i + 1] = colliderChecker.colliderInside[i];
+                transCubes[i + 1] = m_colliderChecker.colliderInside[i];
             }
             transCubes[0] = transform;
 
-            powercubeCreator.CheckforPowercube(transCubes);
+            m_powercubeCreator.CheckforPowercube(transCubes);
 
 
             //Material mat = new Material(GetComponent<MeshRenderer>().material);
@@ -53,7 +58,7 @@ public class Cubie : MonoBehaviour {
 
 		if (FollowTransform != null)
 		{
-			navAgent.destination = followTrans.position;
+			m_navAgent.destination = followTrans.position;
 		}
 	}
 
@@ -74,11 +79,11 @@ public class Cubie : MonoBehaviour {
 
 			if (followTrans != null)
 			{
-				navAgent.enabled = true;
+				m_navAgent.enabled = true;
 			}
 			else
 			{
-				navAgent.enabled = false;
+				m_navAgent.enabled = false;
 			}
 		}
 	}
@@ -87,7 +92,7 @@ public class Cubie : MonoBehaviour {
     {
         get
         {
-            return type;
+            return m_type;
         }
     }
 }
