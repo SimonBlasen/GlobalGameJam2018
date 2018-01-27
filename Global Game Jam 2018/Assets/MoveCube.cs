@@ -8,6 +8,7 @@ public class MoveCube : MonoBehaviour
 	private float m_idleJumpPower = 10000f;
 	//	[SerializeField]
 	private int m_idleJumpIntervall = 3;
+	[SerializeField]
 	private bool m_jumpReady = true;
 
 	[SerializeField]
