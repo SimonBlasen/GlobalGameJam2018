@@ -58,16 +58,20 @@ public class Cubie : MonoBehaviour {
 
 		if (FollowTransform != null)
 		{
-			if (m_navAgent == null)
+<<<<<<< HEAD
+			if (navAgent == null)
 			{
-				m_navAgent = GetComponent<NavMeshAgent>();
+				navAgent = GetComponent<NavMeshAgent>();
 			}
 
-			if (m_navAgent.isOnNavMesh)
+			if (navAgent.isOnNavMesh)
 			{
 				GetComponent<Rigidbody>().velocity = Vector3.zero;
-				m_navAgent.destination = followTrans.position;
+				navAgent.destination = followTrans.position;
 			}	
+=======
+			m_navAgent.destination = followTrans.position;
+>>>>>>> a4a68ea5f2e54021341384cc8aee0da830f93ca8
 		}
 	}
 

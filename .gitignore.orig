@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+Global Game Jam 2018/Temp/
+Global Game Jam 2018/Library/
+Global Game Jam 2018/Library/assetDatabase3
+Global Game Jam 2018/Library/metadata/07/073e76fa88dcacf40a56badc9f28262d
+Global Game Jam 2018/Library/metadata/22/225129c08b2081b47be65ef90e8c2ecf.info
+Global Game Jam 2018/Library/metadata/5c/5c6bc5bef4b7e7846a0e8dd3edea3776
+Global Game Jam 2018/Library/ScriptAssemblies/Assembly-CSharp.dll
+Global Game Jam 2018/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+=======
+Global Game Jam 2018/Temp/*
+Global Game Jam 2018/Library/*
+Global Game Jam 2018/obj/*
+Assembly-CSharp-Editor-firstpass.csproj
+Assembly-CSharp-firstpass.csproj
+Assembly-CSharp.csproj
+>>>>>>> a4a68ea5f2e54021341384cc8aee0da830f93ca8
