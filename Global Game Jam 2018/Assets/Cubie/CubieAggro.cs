@@ -7,13 +7,11 @@ public class CubieAggro : Cubie {
 	[SerializeField]
 	private float jumpBackStrength = 2000f;
 
-	private Transform m_playerTransform;
 
 	// Use this for initialization
 	protected new void Start () {
 		base.Start();
 
-		m_playerTransform = GameObject.Find("Player").transform;
 	}
 
 	private float jumpingBack = 0f;
