@@ -121,9 +121,9 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
+			PlayScreamAudio();
 			if (colliderCheckerScream.colliderInside.Count > 0)
 			{
-				PlayScreamAudio();
 				for (int i = 0; i < colliderCheckerScream.colliderInside.Count; i++)
 				{
 					colliderCheckerScream.colliderInside[i].GetComponent<Cubie>().Interact(InteractionType.SCREAM);
@@ -235,6 +235,7 @@ public class Player : MonoBehaviour {
 
 	public void PlayScreamAudio()
 	{
+		Debug.Log("O süeal");
 		int index = Random.Range(0, selfScreamClips.Length);
 
 		GetComponent<AudioSource>().clip = selfScreamClips[index];
