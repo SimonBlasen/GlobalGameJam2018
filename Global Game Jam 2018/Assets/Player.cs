@@ -86,8 +86,10 @@ public class Player : MonoBehaviour
 //			if (Camera.main.transform.rotation.x)
 //			Debug.Log ("Rotation" + Camera.main.transform.rotation.x + " - Color: " + FindObjectOfType<OverlayImage> ().GetComponent<Image> ().color);
 
-			if (FindObjectOfType<OverlayImage>().GetComponent<Image>().color.a > 250f)
+			if (FindObjectOfType<OverlayImage>().GetComponent<Image>().color.a >= 1f)
 			{
+				Debug.Log("Dead");
+				FindObjectOfType<LevelManager>().GetComponent<LevelManager>().LoadLevel("Level 01 und Terrain");
 
 				m_isDead = false;
 			}
@@ -316,6 +318,11 @@ public class Player : MonoBehaviour
 			}
 
 			health = value;
+			if (health < 0)
+			{
+				health = 0;
+			}
+
 			for (int i = 0; i < health; i++) {
 				images_health [i].enabled = true;
 			}

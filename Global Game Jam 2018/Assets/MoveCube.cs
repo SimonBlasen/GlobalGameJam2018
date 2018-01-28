@@ -68,7 +68,7 @@ public class MoveCube : MonoBehaviour
 
 		//		GetComponent<Rigidbody> ().
 		//		GetComponent<Rigidbody> ().
-		Debug.Log ("cube jump");
+	//	Debug.Log ("cube jump");
 		m_jumpReady = true;
 	}
 }
