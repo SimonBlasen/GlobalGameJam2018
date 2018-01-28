@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour
 	private AudioClip[] selfScreamClips;
 	[SerializeField]
 	private AudioClip[] damageClips;
+	[SerializeField]
+	private float yoffoJumpAlongDistance = 20f;
+	[SerializeField]
+	private float yoffoJumpProbability = 0.8f;
 
 	private bool m_isDead = false;
 
@@ -44,6 +49,7 @@ public class Player : MonoBehaviour
 	private ColliderChecker colliderCheckerScream;
 	[SerializeField]
 	private AudioSource audioSourceDamage;
+	private RigidbodyFirstPersonController fps;
 
 
 	[Header ("Info")]
@@ -60,6 +66,7 @@ public class Player : MonoBehaviour
 
 
 	// Use this for initialization
+<<<<<<< HEAD
 	void Start ()
 	{
 		Cursor.visible = false;
@@ -69,6 +76,19 @@ public class Player : MonoBehaviour
 		imageKickChargeY = image_kickCharge.GetComponent<RectTransform> ().sizeDelta.y;
 	}
 	
+=======
+	void Start () {
+        Cursor.visible = false;
+		fps = GetComponent<RigidbodyFirstPersonController>();
+		Cursor.lockState = CursorLockMode.Locked;
+
+		imageKickChargeX = image_kickCharge.GetComponent<RectTransform>().sizeDelta.x;
+		imageKickChargeY = image_kickCharge.GetComponent<RectTransform>().sizeDelta.y;
+    }
+
+	private bool wasJumping = false;
+
+>>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
 	// Update is called once per frame
 	void Update ()
 	{
@@ -183,6 +203,7 @@ public class Player : MonoBehaviour
 
 
 
+<<<<<<< HEAD
 		if (Input.GetMouseButtonUp (1)) {
 			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform) {
 				Vector3 camFor = Camera.main.transform.forward;
@@ -190,6 +211,77 @@ public class Player : MonoBehaviour
 				camFor.Normalize ();
 				camFor.y = m_kickVecYComp;
 				camFor.Normalize ();
+=======
+
+
+
+
+
+
+
+
+
+
+
+		if (fps.Jumping && wasJumping == false)
+		{
+			wasJumping = true;
+
+			Transform[] yoffoCubes = GameObject.Find("ActiveLevel").GetComponent<ActiveLevel>().GetAllActiveCubes(CubeType.BLUE);
+
+			for (int i = 0; i < yoffoCubes.Length; i++)
+			{
+				if (Vector3.Distance(yoffoCubes[i].position, transform.position) < yoffoJumpAlongDistance)
+				{
+					if (Random.Range(0f, 1f) < yoffoJumpProbability)
+					{
+						yoffoCubes[i].GetComponent<MoveCube>().Jump();
+					}
+				}
+			}
+		}
+		else if (fps.Jumping == false && wasJumping)
+		{
+			wasJumping = false;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		if (Input.GetMouseButtonUp(1))
+        {
+			if (nearestCubie != null)
+                {
+                    Vector3 camFor = Camera.main.transform.forward;
+                    camFor.y = 0f;
+                    camFor.Normalize();
+                    camFor.y = m_kickVecYComp;
+                    camFor.Normalize();
+>>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
+
+				if (nearestCubie.GetComponent<Cubie>().CubeType == CubeType.RED)
+				{
+					CubieAggro ca = nearestCubie.GetComponent<CubieAggro>();
+					nearestCubie.GetComponent<Cubie>().m_navAgent.enabled = false;
+					ca.jumpingBack = 1.7f;
+				}
+
 
 
 				nearestCubie.GetComponent<Rigidbody> ().AddForce (camFor * m_constForce * Mathf.Min (1f, (kick_charge / kickFullChargeTime)));
@@ -208,8 +300,15 @@ public class Player : MonoBehaviour
 		}
 
 
+<<<<<<< HEAD
 		if (Input.GetMouseButton (1)) {
 			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform) {
+=======
+		if (Input.GetMouseButton(1))
+		{
+			if (nearestCubie != null)
+			{
+>>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
 				kick_charge += Time.deltaTime;
 			}
 		} else if (kick_charge != 0f) {
