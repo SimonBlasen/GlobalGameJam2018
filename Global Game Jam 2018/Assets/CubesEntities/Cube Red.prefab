@@ -256,7 +256,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -274,7 +274,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_colliderCheckerPlayer: {fileID: 114374497561153238}
   m_type: 0
   m_isAttacking: 0
-  jumpBackStrength: 7000
+  jumpBackStrength: 10
 --- !u!114 &114147169410760468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,7 +388,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 1.2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

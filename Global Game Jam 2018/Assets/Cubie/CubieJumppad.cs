@@ -21,7 +21,8 @@ public class CubieJumppad : Cubie {
 
 		if (colliderPlayerChecker.colliderInside.Count > 0)
 		{
-			colliderPlayerChecker.colliderInside[0].GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPadStrength);
+			colliderPlayerChecker.colliderInside[0].GetComponent<Rigidbody>().velocity = (new Vector3(0f, 4f, -0.3f)) * jumpPadStrength;
+			//colliderPlayerChecker.colliderInside[0].GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPadStrength);
 		}
 	}
 }

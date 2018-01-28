@@ -445,7 +445,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_type: 4
   m_isAttacking: 0
   colliderPlayerChecker: {fileID: 114135179717163350}
-  jumpPadStrength: 5000
+  jumpPadStrength: 4
 --- !u!114 &114655534475358690
 MonoBehaviour:
   m_ObjectHideFlags: 1
