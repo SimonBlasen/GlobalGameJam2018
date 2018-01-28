@@ -22,6 +22,8 @@ public class CubieAggro : Cubie {
 		if (m_colliderCheckerPlayer.colliderInside.Count > 0 && jumpingBack <= 0f)
 		{
 			FollowTransform = m_playerTransform;
+
+			Debug.Log(m_navAgent.velocity.magnitude);
 		}
 		else
 		{
@@ -53,6 +55,22 @@ public class CubieAggro : Cubie {
 
 			m_navAgent.enabled = false;
 			//GetComponent<Rigidbody>().AddForce((transform.forward * -1f + new Vector3(0f, 1f, 0f)).normalized * jumpBackStrength);
+		}
+	}
+
+	public override void Interact(InteractionType interaction)
+	{
+		if (interaction == InteractionType.SCREAM)
+		{
+			transform.localScale = transform.localScale * 1.02f;
+			SphereCollider[] sphCols = GetComponentsInChildren<SphereCollider>();
+			for (int i = 0; i < sphCols.Length; i++)
+			{
+				if (m_colliderClosePlayer.gameObject.transform != sphCols[i].transform)
+				{
+					sphCols[i].radius = sphCols[i].radius / 1.02f;
+				}
+			}
 		}
 	}
 }
