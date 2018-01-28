@@ -6,24 +6,32 @@ public class CubieAggro : Cubie {
 
 	[SerializeField]
 	private float jumpBackStrength = 2000f;
+	[SerializeField]
+	private float yoffoCubesDistance = 5f;
 
+	private ActiveLevel m_activeLevel;
 
 	// Use this for initialization
 	protected new void Start () {
 		base.Start();
+		m_activeLevel = GameObject.Find("ActiveLevel").GetComponent<ActiveLevel>();
 
 	}
 
-	private float jumpingBack = 0f;
+	public float jumpingBack = 0f;
+
+	private bool blockedByYoffos = false;
 	
 	// Update is called once per frame
 	protected new void Update () {
 		base.Update();
-		if (m_colliderCheckerPlayer.colliderInside.Count > 0 && jumpingBack <= 0f)
+		if (m_colliderCheckerPlayer.colliderInside.Count > 0 && jumpingBack <= 0f && blockedByYoffos == false)
 		{
 			FollowTransform = m_playerTransform;
 
-			Debug.Log(m_navAgent.velocity.magnitude);
+
+
+			//Debug.Log(m_navAgent.velocity.magnitude);
 		}
 		else
 		{
@@ -42,6 +50,36 @@ public class CubieAggro : Cubie {
 			}
 		}
 
+
+		if (m_colliderChecker && m_colliderChecker.colliderInside.Count >= 3)
+		{
+			int nearYoffoCubes = 0;
+
+			Transform[] allBlues = m_activeLevel.GetAllActiveCubes(CubeType.BLUE);
+
+			for (int i = 0; i < allBlues.Length; i++)
+			{
+				if (Vector3.Distance(allBlues[i].position, transform.position) < yoffoCubesDistance)
+				{
+					nearYoffoCubes++;
+				}
+			}
+
+			//Debug.Log(nearYoffoCubes);
+
+			if (nearYoffoCubes >= 3)
+			{
+				blockedByYoffos = true;
+			}
+			else
+			{
+				blockedByYoffos = false;
+			}
+		}
+		else
+		{
+			blockedByYoffos = false;
+		}
 
 
 		if (m_colliderClosePlayer && m_colliderClosePlayer.colliderInside.Count > 0 && jumpingBack <= 0f)

@@ -14,9 +14,17 @@ public class Cubie : MonoBehaviour {
 	[SerializeField]
 	protected ColliderChecker m_colliderCheckerPlayer;
     protected PowercubeCreator m_powercubeCreator;
-	protected NavMeshAgent m_navAgent;
+	public NavMeshAgent m_navAgent;
     [SerializeField]
     private CubeType m_type;
+	[SerializeField]
+	private float move_random_prob_min = 1000f;
+	[SerializeField]
+	private float move_random_prob_max = 1001f;
+	[SerializeField]
+	private float move_random_duration_min = 0f;
+	[SerializeField]
+	private float move_random_duration_max = 0.1f;
 
     [SerializeField]
     private bool m_isAttacking;
@@ -27,11 +35,16 @@ public class Cubie : MonoBehaviour {
 	protected Transform m_playerTransform;
 	protected AudioSource m_audioSource;
 
+
+	public bool wanderAllowed = false;
+	private bool origWnaderAllowed = false;
+	protected bool currently_wandering = false;
     
 
     // Use this for initialization
     protected void Start ()
     {
+		origWnaderAllowed = wanderAllowed;
 		m_powercubeCreator = GameObject.Find("PowercubeCreator").GetComponent<PowercubeCreator>();
 		m_playerTransform = GameObject.Find("Player").transform;
 	    m_navAgent = GetComponent<NavMeshAgent>();
@@ -60,9 +73,72 @@ public class Cubie : MonoBehaviour {
 
 	private bool lookAtPlayer = false;
 
+	private float wanderTimeWait = 0f;
+	private float wanderTime = 0f;
+	private Transform wander_target = null;
+
+	private int wanderState = 0;
+
 	// Update is called once per frame
 	protected void Update ()
     {
+		if (wanderAllowed && wanderState == 0)
+		{
+			wanderTimeWait = Random.Range(move_random_prob_min, move_random_prob_max);
+			currently_wandering = true;
+			wander_target = null;
+
+			wanderState = 1;
+
+		}
+
+		if (wanderAllowed && currently_wandering && wanderTimeWait > 0f && wanderState == 1)
+		{
+			wanderTimeWait -= Time.deltaTime;
+		}
+
+		if (wanderAllowed && currently_wandering && wanderTimeWait <= 0f && wander_target == null && wanderState ==1)
+		{
+			wanderState = 2;
+			wander_target = GameObject.Find("RandomWalkSpawns").GetComponent<RandomMovementSpawns>().spawns[Random.Range(0, GameObject.Find("RandomWalkSpawns").GetComponent<RandomMovementSpawns>().spawns.Length)];
+		}
+
+
+		if (wanderAllowed && currently_wandering && wanderTimeWait <= 0f && wander_target != null && m_navAgent.enabled == false && wanderState == 2)
+		{
+			m_navAgent.enabled = true;
+
+			m_navAgent.destination = wander_target.position;
+
+			wanderTime = Random.Range(move_random_duration_min, move_random_duration_max);
+
+			wanderState = 3;
+		}
+
+		if (wanderAllowed && currently_wandering && wanderTimeWait <= 0f && wander_target != null && wanderTime > 0f && m_navAgent.enabled && wanderState == 3)
+		{
+			wanderTime -= Time.deltaTime;
+		
+		
+		}
+
+
+		if (wanderAllowed && currently_wandering && wanderTimeWait <= 0f && wander_target != null && wanderTime <= 0f && m_navAgent.enabled && wanderState ==3)
+		{
+			wanderState 
+			= 0;
+			currently_wandering = false;
+			m_navAgent.enabled = false;
+		}
+
+		if (wanderAllowed == false)
+		{
+			currently_wandering = false;
+			wander_target = null;
+		}
+
+
+
 		RaycastHit toGround;
 
 		if (m_navAgent.velocity.magnitude > 0.1f)
@@ -156,11 +232,21 @@ public class Cubie : MonoBehaviour {
 
 			if (followTrans != null)
 			{
+				wanderAllowed = false;
 				m_navAgent.enabled = true;
 			}
 			else
 			{
-				m_navAgent.enabled = false;
+				if (wanderAllowed == false)
+				{
+					m_navAgent.enabled = false;
+				}
+
+				if (origWnaderAllowed)
+				{
+					wanderAllowed = true;
+				}
+				//m_navAgent.enabled = false;
 			}
 		}
 	}
