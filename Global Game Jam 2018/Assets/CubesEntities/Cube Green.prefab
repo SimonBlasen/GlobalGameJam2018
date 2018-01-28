@@ -425,9 +425,15 @@ MonoBehaviour:
   m_colliderClosePlayer: {fileID: 114760141013389220}
   m_colliderChecker: {fileID: 114171091729019976}
   m_colliderCheckerPlayer: {fileID: 114471661890935808}
+  m_navAgent: {fileID: 0}
   m_type: 1
+  move_random_prob_min: 1
+  move_random_prob_max: 10
+  move_random_duration_min: 0.25
+  move_random_duration_max: 3
   m_isAttacking: 0
   sourceMoving: {fileID: 82084025584095166}
+  wanderAllowed: 1
   screamClips:
   - {fileID: 8300000, guid: e31e0b748fa8b8942b848883441c4ffd, type: 3}
 --- !u!114 &114471661890935808

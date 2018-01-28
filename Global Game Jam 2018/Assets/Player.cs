@@ -65,18 +65,6 @@ public class Player : MonoBehaviour
 	private float imageKickChargeY = 0f;
 
 
-	// Use this for initialization
-<<<<<<< HEAD
-	void Start ()
-	{
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
-
-		imageKickChargeX = image_kickCharge.GetComponent<RectTransform> ().sizeDelta.x;
-		imageKickChargeY = image_kickCharge.GetComponent<RectTransform> ().sizeDelta.y;
-	}
-	
-=======
 	void Start () {
         Cursor.visible = false;
 		fps = GetComponent<RigidbodyFirstPersonController>();
@@ -88,7 +76,6 @@ public class Player : MonoBehaviour
 
 	private bool wasJumping = false;
 
->>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
 	// Update is called once per frame
 	void Update ()
 	{
@@ -203,23 +190,6 @@ public class Player : MonoBehaviour
 
 
 
-<<<<<<< HEAD
-		if (Input.GetMouseButtonUp (1)) {
-			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform) {
-				Vector3 camFor = Camera.main.transform.forward;
-				camFor.y = 0f;
-				camFor.Normalize ();
-				camFor.y = m_kickVecYComp;
-				camFor.Normalize ();
-=======
-
-
-
-
-
-
-
-
 
 
 
@@ -273,7 +243,6 @@ public class Player : MonoBehaviour
                     camFor.Normalize();
                     camFor.y = m_kickVecYComp;
                     camFor.Normalize();
->>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
 
 				if (nearestCubie.GetComponent<Cubie>().CubeType == CubeType.RED)
 				{
@@ -300,15 +269,10 @@ public class Player : MonoBehaviour
 		}
 
 
-<<<<<<< HEAD
-		if (Input.GetMouseButton (1)) {
-			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform) {
-=======
 		if (Input.GetMouseButton(1))
 		{
 			if (nearestCubie != null)
 			{
->>>>>>> 647db72c58f4e87652fd91b9664dc039344d72a8
 				kick_charge += Time.deltaTime;
 			}
 		} else if (kick_charge != 0f) {
