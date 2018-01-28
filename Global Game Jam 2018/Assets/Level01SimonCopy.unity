@@ -3005,11 +3005,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873963902}
     m_Modifications:
-    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: yoffoSounds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 22.448597
@@ -3046,48 +3041,6 @@ Prefab:
       propertyPath: m_Name
       value: Cube Blue (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376670996912602, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 195002920412149404, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: m_Speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82603442801765542, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: yoffoSounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: fc33230c2363e244ea5a4b2fdd0b2372, type: 3}
-    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: yoffoSounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 01c061d907904fa438eb99e07ae942e6, type: 3}
-    - target: {fileID: 114895206814489162, guid: 541e609e5a680dd41aa48fedfa31e4c4,
-        type: 2}
-      propertyPath: yoffoSounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 139ee1b6acb0c3b438a939671551e66a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541e609e5a680dd41aa48fedfa31e4c4, type: 2}
   m_IsPrefabParent: 0
@@ -3487,21 +3440,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4543318407651158, guid: 1575c167cfa074e498ea68325cb9b3cc, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 195993755230824320, guid: 1575c167cfa074e498ea68325cb9b3cc,
-        type: 2}
-      propertyPath: m_Speed
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82340767577508534, guid: 1575c167cfa074e498ea68325cb9b3cc,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
