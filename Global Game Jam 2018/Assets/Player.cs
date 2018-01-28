@@ -79,20 +79,25 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.K)) {
-			Die ();
-		}
+		//if (Input.GetKeyDown (KeyCode.K)) {
+		//	Die ();
+		//}
 		if (m_isDead) {
 //			if (Camera.main.transform.rotation.x)
 //			Debug.Log ("Rotation" + Camera.main.transform.rotation.x + " - Color: " + FindObjectOfType<OverlayImage> ().GetComponent<Image> ().color);
 
-			if (FindObjectOfType<OverlayImage> ().GetComponent<Image> ().color.a > 250f)
+			if (FindObjectOfType<OverlayImage>().GetComponent<Image>().color.a > 250f)
+			{
+
 				m_isDead = false;
+			}
 			Camera.main.transform.Rotate (Vector3.right * 20f * Time.deltaTime);
 			Color newColor = FindObjectOfType<OverlayImage> ().GetComponent<Image> ().color;
 			newColor.a = newColor.a + .4f * Time.deltaTime;
 			FindObjectOfType<OverlayImage> ().GetComponent<Image> ().color = newColor;
 		
+
+
 		}
 		audioFootsteps.WalkingSpeed = (new Vector2 (GetComponent<Rigidbody> ().velocity.x, GetComponent<Rigidbody> ().velocity.z)).magnitude;
 
@@ -149,7 +154,7 @@ public class Player : MonoBehaviour
 
 
 		if (Input.GetMouseButtonDown (0)) {
-			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform) {
+			if (nearestCubie != null && nearestCubie.GetComponent<Cubie> ().FollowTransform != transform && nearestCubie.GetComponent<Cubie>().CubeType != CubeType.RED) {
 				m_grabbedCubem = nearestCubie;
 				m_grabbedCubem.GetComponent<Rigidbody> ().useGravity = false;
 				m_grab_relative = nearestCubie.position - transform.position;
@@ -317,6 +322,11 @@ public class Player : MonoBehaviour
 
 			for (int i = health; i < images_health.Length; i++) {
 				images_health [i].enabled = false;
+			}
+
+			if (health <= 0)
+			{
+				Die();
 			}
 		}
 	}
