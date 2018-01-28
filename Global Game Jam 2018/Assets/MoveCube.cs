@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MoveCube : MonoBehaviour
 {
 	//	[SerializeField]
 	private float m_idleJumpPower = 10000f;
 	//	[SerializeField]
-	private int m_idleJumpIntervall = 3;
+	private int m_idleJumpIntervall = 9;
 	[SerializeField]
 	private bool m_jumpReady = true;
 
@@ -29,11 +30,25 @@ public class MoveCube : MonoBehaviour
 	{
 		if (m_jumpReady) {
 			m_jumpReady = false;
-			Invoke ("Jump", Random.Range (m_idleJumpIntervall - 1, m_idleJumpIntervall + 1));
+			float vaddl = Random.Range(m_idleJumpIntervall - 1, m_idleJumpIntervall + 1);
+			Invoke ("Jump", vaddl);
+			//sInvoke ("ReenableNavAgent", vaddl + 1f);
 		}	
 	}
 
-	void Jump ()
+
+	bool wasnavon = false;
+
+	void ReenableNavAgent()
+	{
+		if (wasnavon)
+		{
+			GetComponent<NavMeshAgent>().enabled = true;
+		}
+	}
+
+
+	public void Jump ()
 	{
 		
 //		GetComponent<Rigidbody> ().AddTorque (Vector3.up * m_idleJumpPower);
@@ -42,13 +57,17 @@ public class MoveCube : MonoBehaviour
 //			Vector3 move = Vector3.MoveTowards (transform.position, m_target.position, 2.5f);
 ////			Vector3.RotateTowards
 //		}
-		GetComponent<Rigidbody> ().AddForce (Vector3.up * m_idleJumpPower * (Random.value * 0.3f + 0.1f));
 
-//		else 
-//			GetComponent<Rigidbody> ().AddForce (Vector3.up * m_idleJumpPower * (Random.value * 0.3f + 0.1f));
+		if (GetComponent<NavMeshAgent>().enabled == false)
+		{
+			GetComponent<Rigidbody> ().AddForce (Vector3.up * m_idleJumpPower * (Random.value * 0.3f + 0.1f));
+		}
 
-//		GetComponent<Rigidbody> ().
-//		GetComponent<Rigidbody> ().
+		//		else 
+		//			GetComponent<Rigidbody> ().AddForce (Vector3.up * m_idleJumpPower * (Random.value * 0.3f + 0.1f));
+
+		//		GetComponent<Rigidbody> ().
+		//		GetComponent<Rigidbody> ().
 		Debug.Log ("cube jump");
 		m_jumpReady = true;
 	}
