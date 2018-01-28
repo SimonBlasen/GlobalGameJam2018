@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class Cubie : MonoBehaviour {
 
 	[SerializeField]
+	private AudioClip clipMoving;
+	[SerializeField]
 	protected ColliderChecker m_colliderClosePlayer;
     [SerializeField]
 	protected ColliderChecker m_colliderChecker;
@@ -19,6 +21,8 @@ public class Cubie : MonoBehaviour {
     [SerializeField]
     private bool m_isAttacking;
 
+	[SerializeField]
+	protected AudioSource sourceMoving;
 
 	protected Transform m_playerTransform;
 	protected AudioSource m_audioSource;
@@ -59,6 +63,22 @@ public class Cubie : MonoBehaviour {
 	// Update is called once per frame
 	protected void Update ()
     {
+		RaycastHit toGround;
+
+		if (m_navAgent.velocity.magnitude > 0.1f)
+		{
+				if (sourceMoving.isPlaying == false)
+				{
+					sourceMoving.clip = clipMoving;
+					sourceMoving.loop = true;
+					sourceMoving.Play();
+				}
+		}
+		else
+		{
+			sourceMoving.Stop();
+		}
+
 		if (lookAtPlayer && m_navAgent.enabled == false)
 		{
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(m_playerTransform.position - transform.position), 0.2f);
