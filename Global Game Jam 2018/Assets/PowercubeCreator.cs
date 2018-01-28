@@ -8,7 +8,7 @@ public class PowercubeCreator : MonoBehaviour {
     private CubeConstellation[] constellations
         = new CubeConstellation[]
         {
-		new CubeConstellation(new CubeType[] { CubeType.GREEN, CubeType.GREEN, CubeType.GREEN }, CubeType.GREEN_POWER),
+		new CubeConstellation(new CubeType[] { CubeType.GREEN, CubeType.GREEN }, CubeType.GREEN_POWER),
 		new CubeConstellation(new CubeType[] { CubeType.RED, CubeType.RED }, CubeType.GREEN),
 
         };
@@ -98,7 +98,7 @@ public class CubeConstellation
             tTypes.Add(cubeTypes[i]);
         }
 
-		CubeType[] sortedCubes = new CubeType[cubes.Length];
+		/*CubeType[] sortedCubes = new CubeType[cubes.Length];
 
 		for (int i = 0; i < sortedCubes.Length; i++)
 		{
@@ -136,15 +136,14 @@ public class CubeConstellation
 			}
 		}
 
-		/*for (int i = 0; i < cubes.Length; i++)
+		return true;
+		*/
+
+		for (int i = 0; i < cubes.Length; i++)
         {
 			tTypes.Remove(cubes[i].GetComponent<Cubie>().CubeType);
             //tTypes.Remove(cubeTypes[i]);
-        }*/
-
-
-		return true;
-
-        //return tTypes.Count == 0;
+        }
+        return tTypes.Count == 0;
     }
 }

@@ -44,12 +44,15 @@ public class CubieAggro : Cubie {
 
 		if (m_colliderClosePlayer && m_colliderClosePlayer.colliderInside.Count > 0 && jumpingBack <= 0f)
 		{
+			//Debug.Log((transform.forward + (new Vector3(0f, 1f, 0f))).normalized * jumpBackStrength + "," + m_playerTransform.GetComponent<Rigidbody>().mass);
+			//m_playerTransform.GetComponent<Rigidbody>().AddForce((transform.forward + (new Vector3(0f, 1f, 0f))).normalized * jumpBackStrength);
+			m_playerTransform.GetComponent<Rigidbody>().velocity = (transform.forward + (new Vector3(0f, 1f, 0f))).normalized * jumpBackStrength;
 			m_playerTransform.GetComponent<Player>().Health--;
 
 			jumpingBack = 2f;
 
 			m_navAgent.enabled = false;
-			GetComponent<Rigidbody>().AddForce((transform.forward * -1f + new Vector3(0f, 1f, 0f)).normalized * jumpBackStrength);
+			//GetComponent<Rigidbody>().AddForce((transform.forward * -1f + new Vector3(0f, 1f, 0f)).normalized * jumpBackStrength);
 		}
 	}
 }
